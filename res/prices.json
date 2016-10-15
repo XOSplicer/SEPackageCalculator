@@ -1,0 +1,54 @@
+{
+  "services":[
+    {
+      "serviceName" : "DHL",
+      "categories"  : [
+        {
+          "categoryName"  : "Päckchen",
+          "maxHeight"     : "15.00",
+          "maxLength"     : "30.00",
+          "maxWidth"      : "30.00",
+          "maxWeight"     : "1.00",
+          "maxGirth"      : "",
+          "price"         : "4.00"
+        },
+        {
+          "categoryName"  : "Päckchen",
+          "maxHeight"     : "15.00",
+          "maxLength"     : "30.00",
+          "maxWidth"      : "60.00",
+          "maxWeight"     : "2.00",
+          "maxGirth"      : "",
+          "price"         : "4.50"
+        },
+        {
+          "categoryName"  : "Paket",
+          "maxHeight"     : "60.00",
+          "maxLength"     : "60.00",
+          "maxWidth"      : "120.00",
+          "maxWeight"     : "5.00",
+          "maxGirth"      : "300.00",
+          "price"         : "6.99"
+        },
+        {
+          "categoryName"  : "Paket",
+          "maxHeight"     : "60.00",
+          "maxLength"     : "60.00",
+          "maxWidth"      : "120.00",
+          "maxWeight"     : "10.00",
+          "maxGirth"      : "300.00",
+          "price"         : "8.99"
+        },
+        {
+          "categoryName"  : "Paket",
+          "maxHeight"     : "60.00",
+          "maxLength"     : "60.00",
+          "maxWidth"      : "120.00",
+          "maxWeight"     : "31.50",
+          "maxGirth"      : "300.00",
+          "price"         : "14.99"
+        }
+      ]
+    }
+  ]
+}
