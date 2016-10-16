@@ -9,7 +9,7 @@
           "maxLength"     : "30.00",
           "maxWidth"      : "30.00",
           "maxWeight"     : "1.00",
-          "maxGirth"      : "",
+          "maxGirth"      : "1000.00",
           "price"         : "4.00"
         },
         {
@@ -18,7 +18,7 @@
           "maxLength"     : "30.00",
           "maxWidth"      : "60.00",
           "maxWeight"     : "2.00",
-          "maxGirth"      : "",
+          "maxGirth"      : "1000.0",
           "price"         : "4.50"
         },
         {

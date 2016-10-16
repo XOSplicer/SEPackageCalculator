@@ -1,4 +1,4 @@
-package sample;
+package packagecalculator;
 
 
 public class MainController {
