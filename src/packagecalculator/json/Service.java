@@ -10,10 +10,18 @@ public class Service {
     private String serviceName;
     private Category[] categories;
 
+    /**
+     *
+     */
     public Service() {
 
     }
 
+    /**
+     *
+     * @param serviceName
+     * @param categories
+     */
     public Service(String serviceName, Category[] categories) {
         this.serviceName = serviceName;
         this.categories = categories;
@@ -23,6 +31,10 @@ public class Service {
 
     public Category[] getCategories() { return categories; }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Service{" +

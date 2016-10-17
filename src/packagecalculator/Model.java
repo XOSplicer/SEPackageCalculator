@@ -20,17 +20,31 @@ public class Model {
 
     private final String pricesFilePath = "./res/prices.json";
 
+    /**
+     *
+     */
+    public Model() {
+
+    }
+
+    /**
+     *
+     * @param p
+     * @return
+     */
     public PackageCategory calulateBestPackageCategory(Package p) {
-        List<PackageCategory> allCategories = parseJson(pricesFilePath);
-        List<PackageCategory> fittingCategories = allCategories.stream().filter(
-                category -> p.doesFit(category)
-        ).collect(Collectors.toList());
-        Optional<PackageCategory> optMin = fittingCategories.stream().min(Comparator.comparingDouble(PackageCategory::getPrice));
-        return optMin.orElse(new PackageCategory("None", "None", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
+        return parseJson(pricesFilePath).stream()
+                .filter(p::doesFit)
+                .min(Comparator.comparingDouble(PackageCategory::getPrice))
+                .orElse(new PackageCategory("None", "None", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0));
     }
 
 
-
+    /**
+     *
+     * @param path
+     * @return
+     */
     private List<PackageCategory> parseJson(String path) {
         List<PackageCategory> parsed = new ArrayList<>();
         try {

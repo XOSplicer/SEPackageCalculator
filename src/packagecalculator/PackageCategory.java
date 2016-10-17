@@ -16,6 +16,17 @@ public class PackageCategory {
     private double maxGirth;
     private double price;
 
+    /**
+     *
+     * @param serviceName
+     * @param categoryName
+     * @param maxHeight
+     * @param maxLength
+     * @param maxWidth
+     * @param maxWeight
+     * @param maxGirth
+     * @param price
+     */
     public PackageCategory(String serviceName, String categoryName, double maxHeight,
                            double maxLength, double maxWidth, double maxWeight,
                            double maxGirth, double price) {
@@ -29,6 +40,11 @@ public class PackageCategory {
         this.price = price;
     }
 
+    /**
+     *
+     * @param serviceName
+     * @param category
+     */
     public PackageCategory(String serviceName, Category category) {
         this.serviceName = serviceName;
         this.categoryName = category.getCategoryName();
@@ -72,6 +88,10 @@ public class PackageCategory {
         return price;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();

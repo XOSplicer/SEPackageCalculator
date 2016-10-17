@@ -1,12 +1,15 @@
 package packagecalculator;
 
-
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
 
+
+/**
+ *
+ */
 public class MainController {
 
     private Model model;
@@ -20,10 +23,16 @@ public class MainController {
 
     @FXML private Label labelResult;
 
+    /**
+     *
+     */
     public MainController() {
         model = new Model();
     }
 
+    /**
+     *
+     */
     @FXML
     private void buttonCalculateClicked() {
         try {

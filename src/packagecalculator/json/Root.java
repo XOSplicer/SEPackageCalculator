@@ -9,16 +9,27 @@ public class Root {
 
     private Service[] services;
 
+    /**
+     *
+     */
     public Root() {
 
     }
 
+    /**
+     *
+     * @param services
+     */
     public Root(Service[] services) {
         this.services = services;
     }
 
     public Service[] getServices() { return services; }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Root{" +

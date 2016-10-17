@@ -10,7 +10,13 @@ public class Package {
     private double width;
     private double weight;
 
-
+    /**
+     *
+     * @param height
+     * @param length
+     * @param width
+     * @param weight
+     */
     public Package(double height, double length, double width, double weight) {
         this.height = height;
         this.length = length;
@@ -34,10 +40,19 @@ public class Package {
         return weight;
     }
 
+    /**
+     *
+     * @return
+     */
     public double getGirth() {
         return 1*length + 2*width + 2*height;
     }
 
+    /**
+     *
+     * @param category
+     * @return
+     */
     public boolean doesFit(PackageCategory category) {
         return height <= category.getMaxHeight()
                 && length <= category.getMaxLength()

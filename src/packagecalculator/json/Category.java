@@ -13,10 +13,23 @@ public class Category {
     private double maxGirth;
     private double price;
 
+    /**
+     *
+     */
     public Category() {
 
     }
 
+    /**
+     *
+     * @param categoryName
+     * @param maxHeight
+     * @param maxLength
+     * @param maxWidth
+     * @param maxWeight
+     * @param maxGirth
+     * @param price
+     */
     public Category(String categoryName, double maxHeight, double maxLength,
                     double maxWidth, double maxWeight, double maxGirth, double price) {
         this.categoryName = categoryName;
@@ -56,6 +69,10 @@ public class Category {
         return price;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString() {
         return "Category{" +
