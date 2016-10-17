@@ -10,8 +10,14 @@
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.76-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packagecalculator.MainController">
    <columnConstraints>
       <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
+      <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
+      <RowConstraints />
       <RowConstraints />
    </rowConstraints>
    <children>
@@ -19,11 +25,11 @@
       <Label text="Length [cm]" GridPane.columnIndex="1" />
       <Label text="Width [cm]" GridPane.columnIndex="2" />
       <Label text="Weight [kg]" GridPane.columnIndex="3" />
-       <Button fx:id="ButtonCalculate" mnemonicParsing="false" text="Calculate" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <TextField fx:id="FieldHeight" promptText="Height" GridPane.rowIndex="1" />
-      <TextField fx:id="FieldLength" promptText="Length" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <TextField fx:id="FieldWidth" promptText="Width" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <TextField fx:id="FieldWeight" promptText="Weight" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-       <Label fx:id="LabelResult" text="Result" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+       <Button fx:id="buttonCalculate" mnemonicParsing="false" onAction="#buttonCalculateClicked" text="Calculate" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <TextField fx:id="fieldHeight" promptText="Height" GridPane.rowIndex="1" />
+      <TextField fx:id="fieldLength" promptText="Length" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+      <TextField fx:id="fieldWidth" promptText="Width" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      <TextField fx:id="fieldWeight" promptText="Weight" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+       <Label fx:id="labelResult" GridPane.columnIndex="5" GridPane.rowIndex="1" />
    </children>
 </GridPane>
