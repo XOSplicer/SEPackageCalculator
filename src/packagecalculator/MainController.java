@@ -8,7 +8,9 @@ import javafx.scene.layout.Region;
 
 
 /**
- *
+ * The "glue" between the view defined by @file main.fxml and the model
+ * Handles callbacks and holds references to the GUI Nodes
+ * This class will be instantiated automatically by JavaFX upon loading the view
  */
 public class MainController {
 
@@ -24,14 +26,17 @@ public class MainController {
     @FXML private Label labelResult;
 
     /**
-     *
+     * Default no-parameter constructor needed by JavaFX
+     * automatically called
      */
     public MainController() {
         model = new Model();
     }
 
     /**
-     *
+     * callback method for the "Calculate" button
+     * will be called automatically upon clicking it
+     * defined as callback in @file main.fxml
      */
     @FXML
     private void buttonCalculateClicked() {
