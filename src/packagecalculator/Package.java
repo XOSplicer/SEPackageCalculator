@@ -42,7 +42,7 @@ public class Package {
 
     /**
      *
-     * @return
+     * @return the girth calculated by 1*length + 2*width + 2*height
      */
     public double getGirth() {
         return 1*length + 2*width + 2*height;
@@ -50,15 +50,12 @@ public class Package {
 
     /**
      *
-     * @param category
-     * @return
+     * @param category PackageCategory to be checked against
+     * @return whether or not the package fits into the constraints of the given category
      */
+    /* functionality is moved to PackageCategory */
     public boolean doesFit(PackageCategory category) {
-        return height <= category.getMaxHeight()
-                && length <= category.getMaxLength()
-                && width <= category.getMaxWidth()
-                && weight <= category.getMaxWeight()
-                && getGirth() <= category.getMaxGirth();
+        return category.canHold(this);
     }
 
 }

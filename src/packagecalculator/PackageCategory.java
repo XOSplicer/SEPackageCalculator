@@ -88,6 +88,14 @@ public class PackageCategory {
         return price;
     }
 
+    public boolean canHold(Package p) {
+        return p.getWidth() <= this.getMaxHeight()
+                && p.getLength() <= this.getMaxLength()
+                && p.getWidth() <= this.getMaxWidth()
+                && p.getWeight() <= this.getMaxWeight()
+                && p.getGirth() <= this.getMaxGirth();
+    }
+
     /**
      *
      * @return
