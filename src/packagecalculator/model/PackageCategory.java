@@ -130,7 +130,7 @@ public class PackageCategory {
         Arrays.sort(dim);
         this.maxLength = dim[2];
         this.maxWidth = dim[1];
-        this.maxHeight = dim[3];
+        this.maxHeight = dim[0];
     }
 
 }

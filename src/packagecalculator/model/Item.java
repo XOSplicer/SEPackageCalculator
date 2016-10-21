@@ -72,7 +72,7 @@ public class Item {
         Arrays.sort(dim);
         this.setLength(dim[2]);
         this.setWidth(dim[1]);
-        this.setHeight(dim[3]);
+        this.setHeight(dim[0]);
     }
 
     public boolean isValid() {

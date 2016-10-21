@@ -125,7 +125,7 @@ public class Package {
         Arrays.sort(dim);
         this.length = dim[2];
         this.width = dim[1];
-        this.height = dim[3];
+        this.height = dim[0];
     }
 
     private void makeInvalid() {
