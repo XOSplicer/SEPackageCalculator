@@ -1,6 +1,7 @@
-package packagecalculator;
+package packagecalculator.model;
 
 import packagecalculator.json.Category;
+import packagecalculator.model.Package;
 
 /**
  * Created by Felix Stegmaier on 16.10.2016.

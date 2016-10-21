@@ -20,7 +20,7 @@ public class Main extends Application {
      */
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("res/main.fxml"));
         Scene scene = new Scene(root, 1000, 200); /*set initial window size*/
         primaryStage.setTitle("Package Calculator");
         primaryStage.setScene(scene);

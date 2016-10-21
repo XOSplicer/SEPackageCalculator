@@ -1,10 +1,13 @@
-package packagecalculator;
+package packagecalculator.controller;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.Region;
+import packagecalculator.model.Model;
+import packagecalculator.model.Package;
+import packagecalculator.model.PackageCategory;
 
 
 /**

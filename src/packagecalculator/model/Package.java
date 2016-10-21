@@ -1,4 +1,4 @@
-package packagecalculator;
+package packagecalculator.model;
 
 /**
  * Created by Felix Stegmaier on 16.10.2016.

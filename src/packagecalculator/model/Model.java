@@ -1,4 +1,4 @@
-package packagecalculator;
+package packagecalculator.model;
 
 import com.google.gson.Gson;
 import packagecalculator.json.Root;
