@@ -2,12 +2,14 @@ package packagecalculator.model;
 
 import packagecalculator.json.Category;
 
+import java.util.Arrays;
+
 /**
  * Created by Felix Stegmaier on 16.10.2016.
  */
 public class PackageCategory {
 
-    public static final PackageCategory None = new PackageCategory("None", "None", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
+    public static final PackageCategory None = new PackageCategory("None", "None", -1.0, -1.0, -1.0, -1.0, -1.0, -1.0);
 
     private String serviceName;
     private String categoryName;
@@ -91,7 +93,9 @@ public class PackageCategory {
     }
 
     public boolean canHold(Package p) {
-        return p.getWidth() <= this.getMaxHeight()
+
+        return p.isValid()
+                && p.getWidth() <= this.getMaxHeight()
                 && p.getLength() <= this.getMaxLength()
                 && p.getWidth() <= this.getMaxWidth()
                 && p.getWeight() <= this.getMaxWeight()
@@ -116,6 +120,17 @@ public class PackageCategory {
 
     public boolean isNone() {
         return this == PackageCategory.None;
+    }
+
+    private void rearrange() {
+        double[] dim = new double[3];
+        dim[0] = this.getMaxLength();
+        dim[1] = this.getMaxWidth();
+        dim[2] = this.getMaxHeight();
+        Arrays.sort(dim);
+        this.maxLength = dim[2];
+        this.maxWidth = dim[1];
+        this.maxHeight = dim[3];
     }
 
 }
