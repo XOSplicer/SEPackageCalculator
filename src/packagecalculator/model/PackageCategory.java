@@ -58,6 +58,7 @@ public class PackageCategory {
         this.maxWeight = category.getMaxWeight();
         this.maxGirth = category.getMaxGirth();
         this.price = category.getPrice();
+        this.rearrange();
     }
 
     public String getServiceName() {
@@ -119,7 +120,7 @@ public class PackageCategory {
     }
 
     public boolean isNone() {
-        return this == PackageCategory.None;
+        return this.equals(PackageCategory.None) || "None".equals(this.getCategoryName());
     }
 
     private void rearrange() {
@@ -131,6 +132,31 @@ public class PackageCategory {
         this.maxLength = dim[2];
         this.maxWidth = dim[1];
         this.maxHeight = dim[0];
+    }
+
+    public boolean isValid() {
+        if(this.isNone()) {
+            return false;
+        } else if(this.getMaxLength() < 0
+                || this.getMaxWidth() < 0
+                || this.getMaxHeight() < 0
+                || this.getMaxWeight() < 0
+                || this.getMaxGirth() < 0) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    private void makeInvalid() {
+        this.serviceName = "None";
+        this.categoryName = "None";
+        this.maxHeight = -1.0;
+        this.maxLength = -1.0;
+        this.maxWidth = -1.0;
+        this.maxWeight = -1.0;
+        this.maxGirth = -1.0;
+        this.price = -1.0;
     }
 
 }

@@ -73,8 +73,11 @@ public class Model implements ShippingCostCalculatable {
             for (int i = 0; i < root.getServices().length; i++) { /* loop through the services */
                 for (int j = 0; j < root.getServices()[i].getCategories().length; j++) { /* loop through the categories of each service */
                     /* add the Package category with service name to the list */
-                    parsed.add(new PackageCategory(root.getServices()[i].getServiceName(),
-                                                    root.getServices()[i].getCategories()[j]));
+                    PackageCategory pc = new PackageCategory(root.getServices()[i].getServiceName(),
+                            root.getServices()[i].getCategories()[j]);
+                    if(pc.isValid()) {
+                        parsed.add(pc);
+                    }
                 }
             }
             //System.out.println(parsed);
