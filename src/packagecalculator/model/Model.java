@@ -42,10 +42,11 @@ public class Model implements ShippingCostCalculatable {
      *          else a default "None" category, hinting, no category is applicable for the package @param p
      */
     public PackageCategory calculateBestPackageCategory(Package p) {
+        if()
         return parseJson(pricesFilePath).stream() /* read in the json file and parse it to List<PackageCategory> */
                 .filter(p::doesFit)             /* filter out the Categories that are not suitable p*/
                 .min(Comparator.comparingDouble(PackageCategory::getPrice)) /* find the cheapest by the price, returns Optional<PackageCategory> */
-                .orElse(new PackageCategory("None", "None", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0)); /* Fallback if no Category is suitable */
+                .orElse(PackageCategory.None); /* Fallback if no Category is suitable */
     }
 
 

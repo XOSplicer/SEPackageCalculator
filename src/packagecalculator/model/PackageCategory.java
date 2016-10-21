@@ -1,12 +1,13 @@
 package packagecalculator.model;
 
 import packagecalculator.json.Category;
-import packagecalculator.model.Package;
 
 /**
  * Created by Felix Stegmaier on 16.10.2016.
  */
 public class PackageCategory {
+
+    public static final PackageCategory None = new PackageCategory("None", "None", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
 
     private String serviceName;
     private String categoryName;
@@ -111,6 +112,10 @@ public class PackageCategory {
                         .append("Max. weight: ").append(maxWeight).append(" kg\n")
                         .append("Price: € ").append(price);
         return stringBuilder.toString();
+    }
+
+    public boolean isNone() {
+        return this == PackageCategory.None;
     }
 
 }

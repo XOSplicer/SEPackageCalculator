@@ -1,9 +1,15 @@
 package packagecalculator.model;
 
+import java.util.List;
+
 /**
  * Created by Felix Stegmaier on 16.10.2016.
  */
 public class Package {
+
+    public final static Package None = new Package(0.0, 0.0, 0.0, 0.0);
+
+    //TODO use is Valid ind validation instead
 
     private double height;
     private double length;
@@ -22,6 +28,10 @@ public class Package {
         this.length = length;
         this.width = width;
         this.weight = weight;
+    }
+
+    public Package(List<Item> items) {
+
     }
 
     public double getHeight() {
@@ -56,6 +66,10 @@ public class Package {
     /* functionality is moved to PackageCategory */
     public boolean doesFit(PackageCategory category) {
         return category.canHold(this);
+    }
+
+    public boolean isNone() {
+        return this == Package.None;
     }
 
 }
