@@ -51,7 +51,7 @@ public class MainController {
             double weight = Double.parseDouble(fieldWeight.getText());
 
             /* Calculate the best Package Category for the given Package*/
-            PackageCategory packageCategory = model.calulateBestPackageCategory(new Package(height, length, width, weight));
+            PackageCategory packageCategory = model.calculateBestPackageCategory(new Package(height, length, width, weight));
 
             /* Set the content of the output label to info about the package Category */
             labelResult.setText(packageCategory.toString());
