@@ -107,14 +107,10 @@ public class Package {
     }
 
     public boolean isValid() {
-        if(this.getLength() < 0
+        return !(this.getLength() < 0
                 || this.getWidth() < 0
                 || this.getHeight() < 0
-                || this.getWeight() < 0) {
-            return false;
-        } else {
-            return true;
-        }
+                || this.getWeight() < 0);
     }
 
     public void rearrange() {
