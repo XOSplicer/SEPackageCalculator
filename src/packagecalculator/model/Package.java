@@ -3,6 +3,7 @@ package packagecalculator.model;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * Created by Felix Stegmaier on 16.10.2016.
@@ -37,11 +38,22 @@ public class Package {
 
     public Package(List<Item> items) {
 
+        /* check for null list */
+        if(items == null) {
+            this.makeInvalid();
+            return;
+        }
+
+        /* check for empty list */
         if(items.isEmpty()) {
             this.makeInvalid();
             return;
         }
 
+        /* filter out null items */
+        items = items.stream().filter(i -> i != null).collect(Collectors.toList());
+
+        /* check for invalid packages */
         if(items.stream().anyMatch(i -> !i.isValid())) {
             this.makeInvalid();
             return;
