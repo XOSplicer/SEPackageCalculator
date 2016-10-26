@@ -66,7 +66,7 @@ public class Package {
         this.length = maxLength / 10.0;
         this.width = maxWidth / 10.0;
         this.height = sumHeight / 10.0;
-        this.weight = sumWeight;
+        this.weight = sumWeight / 1000; /* convert from g to kg */
 
         this.rearrange();
 
