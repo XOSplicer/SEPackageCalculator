@@ -96,7 +96,7 @@ public class Model implements ShippingCostCalculatable {
     }
 
     @Override
-    public double calcShippingCost(List<Item> items) {
+    public double calcShippingCosts(List<Item> items) {
 
         Package p = new Package(items);
         PackageCategory pc = calculateBestPackageCategory(p);

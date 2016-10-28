@@ -7,6 +7,6 @@ import java.util.List;
  */
 public interface ShippingCostCalculatable {
 
-    double calcShippingCost(List<Item> items);
+    double calcShippingCosts(List<Item> items);
 
 }
