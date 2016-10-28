@@ -8,7 +8,7 @@ import packagecalculator.model.ShippingCostCalculatable;
 
 import java.util.Arrays;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Created by Felix Stegmaier on 26.10.2016.
@@ -294,7 +294,16 @@ public class MainTest {
         assertEquals("all input inside the first field", Double.NaN, scc.calcShippingCosts(Arrays.asList(books)), 0.001);
     }
 
-
+    @Test
+    public void test20() {
+        Item[] books = new Item[1];
+        books[0] = new Item();
+        books[0].setLength(0);
+        books[0].setWidth(0);
+        books[0].setHeight(0);
+        books[0].setWeight(0);
+        assertEquals("all 0 as values", Double.NaN, scc.calcShippingCosts(Arrays.asList(books)), 0.001);
+    }
 
 
 
